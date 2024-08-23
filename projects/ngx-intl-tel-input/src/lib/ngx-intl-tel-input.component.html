@@ -25,8 +25,9 @@
 			</div>
 			<ul class="iti__country-list"
 				#countryList>
-				<li class="iti__country iti__preferred"
-					*ngFor="let country of preferredCountriesInDropDown"
+				<ng-container *ngIf="!countrySearchText" >
+				<li class="iti__country iti__preferred" 
+					*ngFor="let country of preferredCountriesInDropDown "
 					(click)="onCountrySelect(country, focusable)"
 					[id]="country.htmlId+'-preferred'">
 					<div class="iti__flag-box">
@@ -36,10 +37,11 @@
 					<span class="iti__country-name">{{country.name}}</span>
 					<span class="iti__dial-code">+{{country.dialCode}}</span>
 				</li>
+			</ng-container>
 				<li class="iti__divider"
-					*ngIf="preferredCountriesInDropDown?.length"></li>
+					*ngIf="preferredCountriesInDropDown?.length && !countrySearchText"></li>
 				<li class="iti__country iti__standard"
-					*ngFor="let country of allCountries"
+					*ngFor="let country of allCountries  | countryFilter:countrySearchText"
 					(click)="onCountrySelect(country, focusable)"
 					[id]="country.htmlId">
 					<div class="iti__flag-box">

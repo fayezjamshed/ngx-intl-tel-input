@@ -1,6 +1,6 @@
 {
-  "name": "ngx-intl-tel-input-app-gg",
-  "version": "1.0.10",
+  "name": "ngx-intl-tel-input-app",
+  "version": "1.0.11",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -72,13 +72,13 @@
     "@angular/core": "8.x - 17.x",
     "@angular/forms": "8.x - 17.x"
   },
-  "description": "Forked from https://github.com/webcat12345/ngx-intl-tel-input",
+  "description": "Forked from https://github.com/guillermodelagala/ngx-intl-tel-input",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guillermodelagala/ngx-intl-tel-input.git"
   },
-  "author": "Guillermo de la Gala",
+  "author": "Fayez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/guillermodelagala/ngx-intl-tel-input/issues"
